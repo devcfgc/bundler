@@ -62,7 +62,7 @@ module Bundler
 
       begin
         definition = Bundler.definition
-        definition.validate_ruby!
+        definition.validate_runtime!
         not_installed = definition.missing_specs
         raise GemNotFound if not_installed.any?
       rescue GemNotFound
